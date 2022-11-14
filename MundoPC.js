@@ -116,31 +116,6 @@ class Computadora {
         this._nombre = nombre;
     }
 
-    get monitor() {
-        return this._monitor;
-    }
-
-    set monitor(monitor) {
-        this._monitor = monitor;
-    }
- 
-    get teclado() {
-        return this._teclado;
-    }
-
-    set teclado(teclado) {
-        this._teclado = teclado;
-    }
-
-    get raton() {
-        return this._raton;
-    }
-
-    set raton(raton) {
-        this._raton = raton;
-    }
-
-
     toString() {
     return `Producto Id: ${this._idComputadora} Nombre: ${this._nombre} \n Monitor: ${this._monitor} \n Mouse: ${this._raton} \n Teclado: ${this._teclado}`;
     }
@@ -166,11 +141,9 @@ class Orden {
     mostrarOrden() {
         let ordenComputadoras = '';
         for (let computadora of this._computadoras) {
-            // productosOrden += '\n{' + producto.toString() + '}';
             ordenComputadoras += '\n{' + computadora.toString() + '} ';
         }
-       // console.log(`Orden: ${this._idOrden} Total: $${this.calcularTotal()}, Productos: ${productosOrden} `);
-  
+      
         console.log(`Orden: ${this._idOrden}, Productos: ${ordenComputadoras} `);
     }
 }
